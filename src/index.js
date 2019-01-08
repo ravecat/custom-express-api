@@ -1,7 +1,6 @@
 import http from 'http'
 import createError from 'http-errors'
 import express from 'express'
-import path from 'path'
 import logger from 'morgan'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
