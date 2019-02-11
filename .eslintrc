@@ -1,14 +1,30 @@
 {
-  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 7,
     "sourceType": "module"
   },
   "env": {
-    "node": true
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "it": true,
+    "jest": true,
+    "expect": true,
+    "describe": true,
+    "before": true,
+    "after": true
   },
   "rules": {
-    "no-console": 0,
+    "no-console": [2, { "allow": ["warn", "error"] }],
+    "semi": [2, "always"],
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "no-multiple-empty-lines": [2, { "max": 2, "maxEOF": 0 }],
+    "eol-last": [2, "always"],
     "no-unused-vars": [2, {
       "vars": "all",
       "args": "none",
@@ -18,6 +34,7 @@
       "allowShortCircuit": true,
       "allowTernary": true,
       "allowTaggedTemplates": true
-    }]
+    }],
+    "object-curly-spacing": [2, "always", { "arraysInObjects": false }]
   }
 }

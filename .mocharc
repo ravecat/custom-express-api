@@ -1,0 +1,2 @@
+--recursive ./{,!(node_modules)/**/}*.test.js
+--compilers @babel/register
